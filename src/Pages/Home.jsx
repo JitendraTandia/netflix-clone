@@ -4,6 +4,7 @@ import hero_banner from "../netflix_react_assets/hero_banner.jpg";
 import hero_title from "../netflix_react_assets/hero_title.png";
 import play_icon from "../netflix_react_assets/play_icon.png";
 import info_icon from "../netflix_react_assets/info_icon.png";
+import TitleCards from "../Components/TitleCards";
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Home = () => {
           <p className="max-w-[700px] text-lg mb-5">
             Discovering his ties to a secret ancient order, a young man living
             in modern Istanbul embarks on a quest to save the city from an
-            immortal enemy.
+            immortal enemy.</p>
             <div id="hero-btns" className="flex h-9 mt-3 gap-3 mb-[50px]">
 
 
@@ -36,7 +37,7 @@ const Home = () => {
                 More Info
               </button>
             </div>
-          </p>
+          <TitleCards/>
         </div>
       </div>
     </div>
