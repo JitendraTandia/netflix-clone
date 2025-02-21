@@ -5,6 +5,7 @@ import hero_title from "../netflix_react_assets/hero_title.png";
 import play_icon from "../netflix_react_assets/play_icon.png";
 import info_icon from "../netflix_react_assets/info_icon.png";
 import TitleCards from "../Components/TitleCards";
+import Footer from "../Components/Footer";
 
 const Home = () => {
   return (
@@ -22,24 +23,38 @@ const Home = () => {
           <p className="max-w-[700px] text-lg mb-5">
             Discovering his ties to a secret ancient order, a young man living
             in modern Istanbul embarks on a quest to save the city from an
-            immortal enemy.</p>
-            <div id="hero-btns" className="flex h-9 mt-3 gap-3 mb-[50px]">
+            immortal enemy.
+          </p>
+          <div id="hero-btns" className="flex h-9 mt-3 gap-3 mb-[50px]">
+            <button
+              id="btn"
+              className="border-0 inline-flex px-[20px] text-black items-center gap-[10px] text-sm font-semibold cursor-pointer rounded-md bg-white"
+            >
+              <img className="w-[25px] " src={play_icon} alt="" />
+              Play
+            </button>
 
-
-              <button id="btn" className="border-0 inline-flex px-[20px] text-black items-center gap-[10px] text-sm font-semibold cursor-pointer rounded-md bg-white">
-                <img className="w-[25px] " src={play_icon} alt="" />
-                Play
-              </button>
-
-
-              <button id="dark-btn" className="border-0 inline-flex px-[20px] text-black items-center gap-[10px] text-sm font-semibold cursor-pointer rounded-md bg-[#6d6d6eb3]" >
-                <img className="w-[25px]" src={info_icon} alt="" />
-                More Info
-              </button>
-            </div>
-          <TitleCards/>
+            <button
+              id="dark-btn"
+              className="border-0 inline-flex px-[20px] text-black items-center gap-[10px] text-sm font-semibold cursor-pointer rounded-md bg-[#6d6d6eb3]"
+            >
+              <img className="w-[25px]" src={info_icon} alt="" />
+              More Info
+            </button>
+          </div>
+          <TitleCards />
         </div>
       </div>
+
+
+      <div id="more-cards" className="px-[6%] ">
+      <TitleCards title={"Blockbuster Movies"} category={"top_rated"} />
+      <TitleCards title={"Only on Netflix"} category={"popular"} />
+      <TitleCards title={"Upcoming"} category={"upcoming"} />
+      <TitleCards title={"Top Picks for You"} category={"now_playing"}/>
+      </div>
+
+      <Footer/>
     </div>
   );
 };
